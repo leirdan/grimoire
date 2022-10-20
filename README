@@ -3,3 +3,6 @@ há diversos comentários nos códigos, os quais ainda uso, por vezes, para me a
 é um projeto simples onde um "mago" poderia manter o controle de quem são seus aprendizes e estudantes, além de quais feitiços o mago conhece.
 contém as operações básicas de CRUD em cada um dos "controllers" (os admin_routes e student_routes), além de
 uma função de upgrade de aprendiz para estudante no admin_routes.
+
+-- CÓDIGO DESCUIDADO --
+talvez alguma hora o melhore, mas talvez não. de qualquer forma, é um treino.
