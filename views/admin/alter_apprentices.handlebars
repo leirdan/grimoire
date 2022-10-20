@@ -1,0 +1,56 @@
+<h3 class="mb-3 text-center">Cadastrando um aprendiz </h3>
+<form action="/admin/apprentices/success" method="POST">
+	<div class="row mb-3">
+		<label for="name" class="col-sm-2 col-form-label">Nome do aluno</label>
+		<div class="col-sm-10">
+			<input type="text" name="name" value="{{apprentice.name}}" class="form-control" placeholder="Ex.: Duncan Blackwood" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label for="age" class="col-sm-2 col-form-label">Idade</label>
+		<div class="col-sm-10">
+			<input type="number" name="age" value={{apprentice.age}} class="form-control" placeholder="Informe a idade" />
+		</div>
+	</div>
+	<fieldset class="row mb-3">
+		<legend class="col-form-label col-sm-2 pt-0">Personalidade</legend>
+		<div class="col-sm-10">
+			<select class="form-select" name="personalities">
+				<option selected><p><strong>Como o seu aprendiz se comporta nos treinamentos?</strong></p></option>
+				<option value="Confiante">Não se deixa abalar pelos fracassos; busca melhorar constantemente.</option>
+				<option value="Calmo">Concentra-se com firmeza em sua tarefa; nesses momentos, só há ele e meu desafio no mundo.</option>
+				<option value="Ousado">Presta pouca atenção em meus ensinamentos e tenta cumprir quase por conta própria meus desafios.</option>
+				<option value="Medroso">É receoso até com sua respiração e tenta manter tudo sob controle, com o medo de abrir um portal para
+					outro mundo.</option>
+				<option value="Calado">É um mistério; não esboça reações, ficando difícil de medir sua aprendizagem.</option>
+				<option value="Enérgico">Costuma ser precipitado e acha todos os feitiços uma "grande maravilha".</option>
+				<option value="Curioso">Me faz uma entrevista antes, durante e depois do treinamento; um aluno aplicado em entender mais do
+					que praticar.
+				</option>
+				<option value="Explosivo">Frustra-se com facilidade, mas às vezes converte a frustração em bons resultados. </option>
+			</select>
+		</div>
+	</fieldset>
+
+	<div class="row mb-3">
+		<label for="gender" class="col-sm-2 col-form-label">Gênero</label>
+		<div class="col-sm-10">
+			<input type="text" name="gender" value={{apprentice.gender}} class="form-control" id="gender" />
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<label for="author" class="col-sm-2 col-form-label">Talento</label>
+		<div class="col-sm-10">
+			<select class="form-select" name="talent">
+				{{#each spell}}
+					<option value="{{_id}}">{{name}}, {{category}}</option>
+				{{else}}
+					<option value="0"> Nenhuma magia registrada </option>
+				{{/each}}
+			</select>
+		</div>
+	</div>
+
+	<button type="submit" class="btn btn-primary align-items-center">Registrar feitiço</button>
+</form>

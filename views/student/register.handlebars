@@ -1,0 +1,76 @@
+{{#each errs}}
+	<div class="alert alert-danger">{{text}}</div>
+{{/each}}
+
+<form class="row g-3" action="/student/register/success" method="POST">
+	<div class="col-md-6">
+		<label for="name" class="form-label">Nome</label>
+		<input type="name" name="name" class="form-control" id="name" />
+	</div>
+	<div class="col-md-3">
+		<label for="age" class="form-label">Idade</label>
+		<input type="number" name="age" class="form-control" id="age" />
+	</div>
+	<div class="col-md-3">
+		<label for="inputAddress" class="form-label">Gênero</label>
+		<input type="text" name="gender" class="form-control" id="gender" />
+	</div>
+	<div class="col-md-6">
+		<legend class="col-form-label">Personalidade</legend>
+		<select class="form-select" name="personalities">
+			<option selected><p><strong>Defina sua personalidade</strong></p></option>
+			<option value="Confiante">Confiante</option>
+			<option value="Calmo">Calmo</option>
+			<option value="Ousado">Ousado</option>
+			<option value="Medroso">Medroso</option>
+			<option value="Calado"> Calado </option>
+			<option value="Enérgico">Enérgico</option>
+			<option value="Curioso"> Curioso </option>
+			<option value="Explosivo"> Explosivo </option>
+		</select>
+	</div>
+	<div class="col-md-6">
+		<legend class="col-form-label">Especialidade</legend>
+		<select class="form-select" name="especiality">
+			{{#each spell}}
+				<option value="{{_id}}"> {{name}}, {{category}}</option>
+			{{else}}
+				<option value="0"> Nenhuma categoria registrada</option>
+			{{/each}}
+
+			<!--	
+			<option selected>Selecione sua especialidade</option>
+			<option value="Abjuração">Abjuração</option>
+			<option value="Adivinhação">Adivinhação</option>
+			<option value="Conjuração">Conjuração</option>
+			<option value="Encantamento">Encantamento</option>
+			<option value="Evocação">Evocação</option>
+			<option value="Ilusão">Ilusão</option>
+			<option value="Necromancia">Necromancia</option>
+			<option value="Transmutação">Transmutação</option> -->
+		</select>
+	</div>
+	<div class="col-md-6">
+		<label for="email" class="form-label">Email</label>
+		<input type="text" name="email" class="form-control" id="email" placeholder="Ex.: solana.r@gmail.com" />
+	</div>
+	<div class="col-md-3">
+		<label for="passwd" class="form-label">Senha</label>
+		<input type="password" name="passwd" class="form-control" id="passwd" placeholder="A senha deve ter mais de 6 caracteres!" />
+	</div>
+	<div class="col-md-3">
+		<label for="passwd" class="form-label">Repita a senha</label>
+		<input type="password" name="passwd2" class="form-control" id="passwd2" />
+	</div>
+	<div class="col-12">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="gridCheck" />
+			<label class="form-check-label" for="gridCheck">
+				Não sou um robô
+			</label>
+		</div>
+	</div>
+	<div class="col-12">
+		<button type="submit" class="btn btn-primary">Sign in</button>
+	</div>
+</form>

@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-md-10"><h2> Estudantes no momento: </h2></div>
+	<div class="col-md-2"><a href="/admin/students/create"><button class="btn btn-primary"> Cadastrar estudante </button></a></div>
+</div>
+
+<div class="container">
+	<div class="row">
+		{{#each students}}
+			<div class="card col-md-3 me-3 mt-2 mb-2" style="width: 18rem;">
+				<div class="card-header">
+					<a href="/admin/student/edit/{{name}}"><button class="btn btn-secondary">Editar</button></a>
+				</div>
+				<div class="card-body">
+					<h5 class="card-title">{{this.name}} ({{this.gender}})</h5>
+					<p class="card-text">{{this.age}} anos.</p>
+					<p class="card-text">Personalidade: {{this.personality}} </p>
+					<p class="card-text">Especialidade: <strong>{{this.especiality}} </strong></p>
+					<p class="card-text">E-mail: {{this.email}} </p>
+				</div>
+				<div class="card-footer text-center">
+					<a href="/admin/student/delete/{{name}}"><button type="submit" class="btn btn-danger">Eliminar aprendiz</button></a>
+				</div>
+			</div>
+		{{else}}
+			<h3> Nenhum estudante registrado. </h3>
+		{{/each}}
+	</div>
+</div>

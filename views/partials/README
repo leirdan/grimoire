@@ -1,0 +1,3 @@
+pasta destinada à fragmentar partes do html para não ficar tudo no arquivo "html.handlebars"
+criaremos os componentes que queremos usar, como navbars e cards, e depois colocaremos lá
+melhora a organização.

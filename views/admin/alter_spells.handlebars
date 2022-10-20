@@ -1,0 +1,58 @@
+<h3 class="mb-3 text-center">Editando feitiço... </h3>
+<form action="/admin/spells/edit" method="POST">
+<input type="hidden" name="id" value="{{spell.id}}">
+	<div class="row mb-3">
+		<label for="name" class="col-sm-2 col-form-label">Nome</label>
+		<div class="col-sm-10">
+			<input type="text" value="{{spell.name}}" name="name" class="form-control" placeholder="Informe um nome memorável" />
+		</div>
+	</div>
+	<div class="row mb-3">
+		<label for="description" class="col-sm-2 col-form-label">Descrição</label>
+		<div class="col-sm-10">
+			<input type="text" value="{{spell.description}}" name="description" class="form-control" placeholder="Uma descrição sucinta dos efeitos" />
+		</div>
+	</div>
+	<fieldset class="row mb-3">
+		<legend class="col-form-label col-sm-2 pt-0">Escola de magia</legend>
+		<div class="col-sm-10">
+			<select class="form-select" name="categories">
+				<option selected>Selecione a classificação</option>
+				<option value="Abjuração">Abjuração</option>
+				<option value="Adivinhação">Adivinhação</option>
+				<option value="Conjuração">Conjuração</option>
+				<option value="Encantamento">Encantamento</option>
+				<option value="Evocação">Evocação</option>
+				<option value="Ilusão">Ilusão</option>
+				<option value="Necromancia">Necromancia</option>
+				<option value="Transmutação">Transmutação</option>
+			</select>
+		</div>
+	</fieldset>
+	<fieldset class="row mb-3">
+		<legend class="col-form-label col-sm-2 pt-0">Nível</legend>
+		<div class="col-sm-10">
+			<select class="form-select" name="level">
+				<option selected>Defina o nível</option>
+				<option value="Truque">Truque</option>
+				<option value="1º nível">1º nível</option>
+				<option value="2º nível">2º nível</option>
+				<option value="3º nível">3º nível</option>
+				<option value="4º nível">4º nível</option>
+				<option value="5º nível">5º nível</option>
+				<option value="6º nível">6º nível</option>
+				<option value="7º nível">7º nível</option>
+				<option value="8º nível">8º nível</option>
+				<option value="9º nível">9º nível</option>
+			</select>
+		</div>
+	</fieldset>
+	<div class="row mb-3">
+		<label for="author" class="col-sm-2 col-form-label">Autor original</label>
+		<div class="col-sm-10">
+			<input type="text" value="{{spell.author}}" name="author" class="form-control" id="author" />
+		</div>
+	</div>
+
+	<button type="submit" class="btn btn-primary align-items-center">Alterar feitiço</button>
+</form>

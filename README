@@ -1,0 +1,5 @@
+aplicação que fiz há umas semanas para praticar Javascript no Node.js com banco de dados quando estava iniciando meus estudos.
+há diversos comentários nos códigos, os quais ainda uso, por vezes, para me auxiliar durante o desenvolvimento de outros aplicativos hahaha
+é um projeto simples onde um "mago" poderia manter o controle de quem são seus aprendizes e estudantes, além de quais feitiços o mago conhece.
+contém as operações básicas de CRUD em cada um dos "controllers" (os admin_routes e student_routes), além de
+uma função de upgrade de aprendiz para estudante no admin_routes.

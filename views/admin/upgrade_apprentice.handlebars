@@ -1,0 +1,43 @@
+<h2 class="text-center"> Graduação... </h2>
+<form action="/admin/apprentices/upgrade/success" method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nome do aprendiz</label>
+            <input type="text" name="name" value="{{apprentice.name}}" class="form-control" id="name" placeholder="Informe o nome do sortudo ;)">
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Idade do aprendiz</label>
+            <input type="number" name="age" value="{{apprentice.age}}" class="form-control" id="age" placeholder="Informe o nome do sortudo ;)">
+    </div>
+    <fieldset class="mb-3">
+		<legend class="col-form-label col-sm-2 pt-0">Área em que mais se destacou</legend>
+		<div>
+			<select class="form-select" name="especiality">
+				<option selected>Selecione a especialidade</option>
+				<option value="Abjuração">Abjuração</option>
+				<option value="Adivinhação">Adivinhação</option>
+				<option value="Conjuração">Conjuração</option>
+				<option value="Encantamento">Encantamento</option>
+				<option value="Evocação">Evocação</option>
+				<option value="Ilusão">Ilusão</option>
+				<option value="Necromancia">Necromancia</option>
+				<option value="Transmutação">Transmutação</option>
+			</select>
+		</div>
+	</fieldset>
+    <div class="mb-3">
+        <label for="progress" class="form-label">Descreva a experiência com o aprendiz</label>
+            <textarea class="form-control" name="progress" id="progress" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nome identificador</label>
+        <input type="email" name="email" class="form-control" placeholder="Ex.: duncanb@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Para fins de consulta.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Palavras secretas</label>
+        <input type="password" name="passwd" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Tornar este aprendiz um aluno</button>
+    </form>
+</div>

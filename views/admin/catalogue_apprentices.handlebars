@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-md-10"><h2> Aprendizes no momento: </h2></div>
+	<div class="col-md-2"><a href="/admin/apprentices/create"><button class="btn btn-primary"> Cadastrar aprendiz </button></a></div>
+</div>
+
+<div class="container">
+	<div class="row">
+		{{#each apprentice}}
+			<div class="card col-md-3 me-3 mt-2 mb-2" style="width: 18rem;">
+				<div class="card-header">
+					<p>Ingressou em {{this.registeredAt}}</p>
+					<a href="/admin/apprentices/edit/{{name}}"><button class="btn btn-secondary">Editar</button></a>
+				</div>
+				<div class="card-body">
+					<h5 class="card-title">{{this.name}} ({{this.gender}})</h5>
+					<p class="card-text">{{this.age}} anos.</p>
+					<p class="card-text">Personalidade: {{this.personality}}</p>
+					<p class="card-text">Talento: {{talent.name}}, <strong>{{talent.category}}</strong></p>
+					<a href="/admin/apprentices/upgrade/{{name}}" class="btn btn-primary">Evoluir aprendiz para aluno</a>
+				</div>
+				<div class="card-footer text-center">
+					<a href="/admin/apprentices/delete/{{name}}"><button type="submit" class="btn btn-danger">Eliminar aprendiz</button></a>
+				</div>
+			</div>
+		{{else}}
+			<h3> Nenhum aprendiz registrado. </h3>
+		{{/each}}
+	</div>
+</div>
